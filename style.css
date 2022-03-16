@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Architects Daughter', cursive;
+    color: #a6a6a6;
+    background: #262626;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: url(./assets/img/fire2.jpg) repeat-x;
+    color: rgba(255, 255, 255, 0.2);
+    -webkit-background-clip: text;
+    background-size: contain;
+}
+
+.greeting {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.steps {
+    flex: 1;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 700px;
+    perspective: 1000px;
+ 
+}
+
+
+
+.card {
+    width:154px;
+    height: 204px;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: relative;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.07);
+    transition: 0.5s;
+}
+
+.card:active {
+    transform: scale(0.96);
+    transition: 0.2s;
+}
+
+.card.open {
+    transform: rotateY(180deg);
+}
+
+.card img {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    border-radius: 8px;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.find {
+    transform: none;
+}
+
+.theme {
+    flex: 1;
+    text-align: center;
+}
+
+.start-game {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    color: white;
+    font-size: 24px;
+    z-index: 99;
+}
+
+.end-game {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    color: white;
+    font-size: 24px;
+    z-index: 99;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(3, 167, 3);
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.input {
+    width: 400px;
+    height: 50px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px;
+    color: white;
+    background: #262626;
+    border-radius: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer a {
+    transition: 0.5s;
+}
+
+footer a:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.rss {
+    width: 100px;
+    height: 100px;
+
+}
+
