@@ -15,16 +15,16 @@ body {
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     background: url(./assets/img/fire2.jpg) repeat-x;
     color: rgba(255, 255, 255, 0.2);
     -webkit-background-clip: text;
     background-size: contain;
 }
 
-.greeting {
-    flex: 2.5;
+.title-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,8 +34,14 @@ header {
     font-size: 28px;
 }
 
+.steps-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .steps {
-    flex: 1;
     text-align: center;
 }
 
