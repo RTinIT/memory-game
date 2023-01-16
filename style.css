@@ -5,8 +5,10 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     font-family: 'Architects Daughter', cursive;
     color: #a6a6a6;
     background: #262626;
@@ -15,6 +17,7 @@ body {
 
 header {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -31,7 +34,10 @@ header {
     align-items: flex-end;
     margin-top: 10px;
     margin-bottom: 30px;
-    font-size: 22px;
+}
+
+.title {
+    font-size: 3em;
 }
 
 .steps-wrapper {
@@ -47,23 +53,21 @@ header {
 
 main {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 800px;
-    height: 700px;
     perspective: 1000px;
  
 }
-
-
 
 .card {
     width:154px;
@@ -161,8 +165,10 @@ button {
 
 footer {
     display: flex;
-    justify-content: space-evenly;
+    flex: auto;
+    justify-content: center;
     align-items: center;
+    gap: 80px;
 }
 
 footer a {
@@ -181,3 +187,67 @@ footer a:hover {
 
 }
 
+@media (width > 800px) {
+    .container {
+        width: 800px;
+    }
+}
+
+@media (340px <= width <= 520px) {
+    .card {
+        width: 104px;
+        height: 129px;
+    }
+
+    .card img {
+        width: 100px;
+        height: 125px;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .steps {
+        font-size: 1.2em;
+    }
+
+    footer {
+        gap: 20px;
+    }
+}
+@media (width <= 340px) {
+    .card {
+        width: 84px;
+        height: 104px;
+    }
+
+    .card img {
+        width: 80px;
+        height: 100px;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .steps {
+        font-size: 1.2em;
+    }
+
+    .end-game {
+        font-size: 18px;
+    }
+
+    .end-game p {
+        text-align: center;
+    }
+
+    .input {
+        width: auto;
+    }
+
+    footer {
+        gap: 20px;
+    }
+}
